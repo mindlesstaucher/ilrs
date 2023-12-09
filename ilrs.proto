@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ilrs;
+
+option go_package = "github.com/mindlesstaucher/ilrs";
+
+service LrsService {
+  rpc GetVersion(Empty) returns (Version);
+}
+
+message Empty {}
+
+message Version {
+  string version = 1;
+}
